@@ -19,13 +19,14 @@ root.render(
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/section/4-3" element={<Dtaes43 />} />
           <Route path="/wing/:name" element={<Wings />}></Route>
           <Route path="/api/attachments/:id" element={<Error />} />
           <Route path="/Employees" element={<Employees />} />
           <Route path="/About" element={<About />} />
           <Route path="/Help" element={<Help />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>
